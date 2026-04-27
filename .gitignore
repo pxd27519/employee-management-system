@@ -1,0 +1,17 @@
+# Backend
+backend/target/
+*.class
+*.jar
+*.war
+.idea/
+*.iml
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+# Environment
+.env
+application-local.properties
+.DS_Store
