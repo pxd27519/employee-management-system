@@ -1,0 +1,24 @@
+/* src/app/components/employee-list/employee-list.component.css */
+.list-container { padding: 24px; }
+.list-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; flex-wrap:wrap; gap:12px; }
+.list-header h2 { font-size:22px; font-weight:800; color:#1565C0; margin:0; }
+.header-actions { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.search-input { padding:9px 14px; border:1.5px solid #ddd; border-radius:8px; font-size:14px; width:200px; }
+.search-input:focus { outline:none; border-color:#1565C0; }
+.dept-select { padding:9px 14px; border:1.5px solid #ddd; border-radius:8px; font-size:14px; }
+.btn-add { padding:9px 20px; background:#1565C0; color:white; border:none; border-radius:8px; font-size:14px; font-weight:700; cursor:pointer; }
+.btn-add:hover { background:#0D47A1; }
+.loading { text-align:center; padding:40px; color:#999; }
+.emp-table { width:100%; border-collapse:collapse; background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,0.08); }
+.emp-table th { background:#1565C0; color:white; padding:14px 16px; text-align:left; font-size:13px; font-weight:700; letter-spacing:0.05em; }
+.emp-table td { padding:13px 16px; border-bottom:1px solid #f0f0f0; font-size:14px; color:#333; }
+.emp-table tr:hover td { background:#F8F9FF; }
+.dept-tag { background:#E3F2FD; color:#1565C0; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:600; }
+.role-badge { padding:3px 10px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.06em; }
+.role-badge.admin    { background:#FFF3E0; color:#E65100; }
+.role-badge.manager  { background:#E8F5E9; color:#2E7D32; }
+.role-badge.employee { background:#F3E5F5; color:#6A1B9A; }
+.btn-edit   { padding:5px 14px; background:#1565C0; color:white; border:none; border-radius:6px; font-size:12px; cursor:pointer; margin-right:6px; }
+.btn-delete { padding:5px 14px; background:#e53935; color:white; border:none; border-radius:6px; font-size:12px; cursor:pointer; }
+.btn-edit:hover   { background:#0D47A1; }
+.btn-delete:hover { background:#b71c1c; }

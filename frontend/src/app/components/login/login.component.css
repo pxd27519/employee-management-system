@@ -1,0 +1,41 @@
+/* src/app/components/login/login.component.css */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #070B14 0%, #1a237e 100%);
+}
+.login-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.login-header { text-align: center; margin-bottom: 32px; }
+.login-header h1 { font-size: 42px; font-weight: 800; color: #1565C0; margin: 0; }
+.login-header p  { color: #666; margin: 4px 0 0; font-size: 14px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #333; font-size: 14px; }
+.form-group input {
+  width: 100%; padding: 12px 14px; border: 1.5px solid #ddd;
+  border-radius: 8px; font-size: 15px; transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.form-group input:focus { outline: none; border-color: #1565C0; }
+.btn-login {
+  width: 100%; padding: 14px; background: #1565C0; color: white;
+  border: none; border-radius: 8px; font-size: 16px; font-weight: 700;
+  cursor: pointer; transition: background 0.2s; margin-top: 8px;
+}
+.btn-login:hover:not(:disabled) { background: #0D47A1; }
+.btn-login:disabled { opacity: 0.6; cursor: not-allowed; }
+.error-msg { color: #e53935; font-size: 13px; margin-bottom: 8px; text-align: center; }
+.demo-creds {
+  margin-top: 24px; padding: 14px; background: #F3F4F6;
+  border-radius: 8px; font-size: 13px; color: #555;
+}
+.demo-creds p { margin: 3px 0; }
+.demo-creds strong { color: #1565C0; }

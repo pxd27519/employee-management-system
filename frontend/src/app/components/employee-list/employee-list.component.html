@@ -1,0 +1,67 @@
+<div class="list-container">
+  <div class="list-header">
+    <h2>Employees</h2>
+    <div class="header-actions">
+      <input type="text" placeholder="Search by name..."
+             [(ngModel)]="searchTerm" (input)="onSearch()"
+             class="search-input"/>
+      <select [(ngModel)]="selectedDept" (change)="onDeptFilter()" class="dept-select">
+        <option value="">All Departments</option>
+        @for (d of departments; track d) {
+          <option [value]="d">{{ d }}</option>
+        }
+      </select>
+      @if (canCreate) {
+        <button class="btn-add" (click)="openAddForm()">+ Add Employee</button>
+      }
+    </div>
+  </div>
+
+  @if (loading) {
+    <div class="loading">Loading employees...</div>
+  } @else {
+    <table class="emp-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Department</th>
+          <th>Designation</th>
+          <th>Salary</th>
+          <th>Role</th>
+          @if (canCreate) { <th>Actions</th> }
+        </tr>
+      </thead>
+      <tbody>
+        @for (emp of employees; track emp.id) {
+          <tr>
+            <td>{{ emp.firstName }} {{ emp.lastName }}</td>
+            <td>{{ emp.email }}</td>
+            <td><span class="dept-tag">{{ emp.department }}</span></td>
+            <td>{{ emp.designation }}</td>
+            <td>₹{{ emp.salary | number }}</td>
+            <td>
+              <span class="role-badge" [ngClass]="emp.role.toLowerCase()">
+                {{ emp.role }}
+              </span>
+            </td>
+            @if (canCreate) {
+              <td>
+                <button class="btn-edit" (click)="editEmployee(emp)">Edit</button>
+                @if (isAdmin) {
+                  <button class="btn-delete" (click)="deleteEmployee(emp.id!)">Delete</button>
+                }
+              </td>
+            }
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="7" style="text-align:center; color:#999; padding:32px">
+              No employees found
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>

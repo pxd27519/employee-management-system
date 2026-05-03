@@ -1,0 +1,12 @@
+<!-- src/app/components/navbar/navbar.component.html -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <span class="brand-icon">👥</span>
+    <span class="brand-name">EMS</span>
+  </div>
+  <div class="nav-info">
+    <span class="nav-user">{{ fullName }}</span>
+    <span class="nav-role" [ngClass]="roleClass">{{ role }}</span>
+    <button class="btn-logout" (click)="logout()">Logout</button>
+  </div>
+</nav>

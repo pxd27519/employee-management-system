@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="dashboard">
+  <div class="page-header">
+    <div>
+      <h2>Welcome, {{ fullName }}!</h2>
+      <p class="subtitle">{{ role }} Dashboard</p>
+    </div>
+  </div>
+  <app-employee-list
+    (editEmp)="onEditEmp($event)"
+    (addEmp)="onAddEmp()">
+  </app-employee-list>
+</div>
+
+@if (showForm) {
+  <app-employee-form
+    [editData]="selectedEmployee"
+    (saved)="onFormSaved()"
+    (cancelled)="onFormCancelled()">
+  </app-employee-form>
+}

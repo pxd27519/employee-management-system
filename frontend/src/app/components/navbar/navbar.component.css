@@ -1,0 +1,23 @@
+/* src/app/components/navbar/navbar.component.css */
+.navbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px; height: 60px;
+  background: #1565C0; color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.nav-brand { display: flex; align-items: center; gap: 10px; }
+.brand-icon { font-size: 22px; }
+.brand-name { font-size: 20px; font-weight: 800; letter-spacing: 0.05em; }
+.nav-info   { display: flex; align-items: center; gap: 16px; }
+.nav-user   { font-size: 14px; font-weight: 600; }
+.nav-role   { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.08em; }
+.nav-role.admin    { background: #ff6f00; }
+.nav-role.manager  { background: #2e7d32; }
+.nav-role.employee { background: #6a1b9a; }
+.btn-logout {
+  padding: 7px 18px; background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.6); color: white;
+  border-radius: 6px; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.btn-logout:hover { background: rgba(255,255,255,0.15); }
